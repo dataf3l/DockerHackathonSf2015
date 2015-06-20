@@ -1,0 +1,15 @@
+
+brew install sshfs
+
+# run container and create folder/volume for sshfs to mount
+$ docker run -p 49001:49001 -v /shared:/shared user/image
+
+$ sshfs -p 2022 docker@localhost:/shared ~/shared
+
+I've now got access to the /shared folder inside the container, shown as a mounted drive in OSX.
+
+Hopefully this might help someone.
+
+Thanks @haad for the pointer
+
+

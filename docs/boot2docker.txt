@@ -1,0 +1,54 @@
+Usage: boot2docker [<options>] <command> [<args>]
+
+Boot2Docker management utility.
+
+Commands:
+   init                Create a new Boot2Docker VM.
+   up|start|boot       Start VM from any states.
+   ssh [ssh-command]   Login to VM via SSH.
+   save|suspend        Suspend VM and save state to disk.
+   down|stop|halt      Gracefully shutdown the VM.
+   restart             Gracefully reboot the VM.
+   poweroff            Forcefully power off the VM (may corrupt disk image).
+   reset               Forcefully power cycle the VM (may corrupt disk image).
+   delete|destroy      Delete Boot2Docker VM and its disk image.
+   config|cfg          Show selected profile file settings.
+   info                Display detailed information of VM.
+   ip                  Display the IP address of the VM's Host-only network.
+   shellinit           Display the shell commands to set up the Docker client.
+   status              Display current state of VM.
+   download            Download Boot2Docker ISO image.
+   upgrade             Upgrade the Boot2Docker ISO image (restart if running).
+   version             Display version information.
+
+Options:
+      --basevmdk="": Path to VMDK to use as base for persistent partition
+      --clobber=true: overwrite Docker client binary on boot2docker upgrade
+  -c, --cpus=4: number of CPUs for boot2docker.
+      --dhcp=true: enable VirtualBox host-only network DHCP.
+      --dhcpip=192.168.59.99: VirtualBox host-only network DHCP server address.
+  -s, --disksize=20000: boot2docker disk image size (in MB).
+      --dockerport=0: host Docker port (forward to port 2376 in VM). (deprecated - use with care)
+      --driver="virtualbox": hypervisor driver.
+      --force-upgrade-download=false: always download on boot2docker upgrade, never skip
+      --hostip=192.168.59.3: VirtualBox host-only network IP address.
+      --iso="/Users/a/.boot2docker/boot2docker.iso": path to boot2docker ISO image.
+      --iso-url="https://api.github.com/repos/boot2docker/boot2docker/releases": source URL to provision the boot2docker ISO image.
+      --lowerip=192.168.59.103: VirtualBox host-only network DHCP lower bound.
+  -m, --memory=2048: virtual machine memory size (in MB).
+      --netmask=ffffff00: VirtualBox host-only network mask.
+      --no-dummy="": Example parameter for the dummy driver.
+      --retries=75: number of port knocking retries during 'start'
+      --serial=false: try serial console to get IP address (experimental)
+      --serialfile="": path to the serial socket/pipe.
+      --ssh="ssh": path to SSH client utility.
+      --ssh-keygen="ssh-keygen": path to ssh-keygen utility.
+      --sshkey="/Users/a/.ssh/id_boot2docker": path to SSH key to use.
+      --sshport=2022: host SSH port (forward to port 22 in VM).
+      --upperip=192.168.59.254: VirtualBox host-only network DHCP upper bound.
+      --vbm="VBoxManage": path to VirtualBox management utility.
+      --vbox-share=[]: (defaults to '/Users=Users' if no shares are specified; use 'disable' to explicitly prevent any shares from being created) List of directories to share during 'up|start|boot' via VirtualBox Guest Additions, with optional labels
+  -v, --verbose=false: display verbose command invocations.
+      --vm="boot2docker-vm": virtual machine name.
+      --waittime=300: Time in milliseconds to wait between port knocking retries during 'start'
+error in run: config error: pflag: help requested

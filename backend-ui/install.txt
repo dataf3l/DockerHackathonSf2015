@@ -1,0 +1,8 @@
+just do this:
+
+this runs on ruby-2.1.1
+
+gem install sinatra
+gem install sinatra-contrib
+
+

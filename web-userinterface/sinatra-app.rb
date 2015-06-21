@@ -2,7 +2,7 @@
 require 'sinatra'
 # require 'Haml'
 require 'erb'
- **set :views, Proc.new { File.join(root, "../views") }**
+ # **set :views, Proc.new { File.join(root, "../views") }**
 
 enable :run
 

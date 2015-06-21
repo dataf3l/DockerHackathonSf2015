@@ -1,0 +1,98 @@
+/*MAIN BODY*/
+.main {
+  background-image: url('http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr02/7/17/enhanced-buzz-wide-16030-1381182036-29.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 700px;
+  padding-top: -10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*Search box*/
+.brewery_search {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: #9494B8;
+  font-size: 1.8em;
+  /*height: 500px;*/
+}
+
+/*Brewery Name*/
+.brewery_name {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 1%;
+  font: 2em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color:#194719;
+}
+/*Brewery Name Submit button*/
+.brewery_search .submit {
+  border-radius: 10px;
+  background-color: #19A3A3;
+  font-size; 0.8em;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+/*Beer by Brewery Search*/
+.beer_result {
+  background-color:#ECFFDA;
+  padding: 20px;
+  line-height: 1.4;
+  background-size: 100%;
+  margin: 20px;
+  /*border: 5px solid #47A347;*/
+  border-top: 6px dotted #000;
+  border-bottom: 6px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  margin-bottom: 1px;
+}
+
+.beer_result h3 {
+  color: #197519;
+}
+.beer_result h2 {
+  color: #194719;
+}
+.beer_result p {
+  color: black;
+}
+/*login and register button*/
+.main li {
+  position: right;
+  color: black;
+  font-size: 2em;
+  display: inline-block;
+}
+
+.new_auth h2{
+  color: #003300;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  margin-top: -3px;
+}
+
+/*Registeration form*/
+#registrationPane {
+  visibility: hidden;
+  padding-top: 30px;
+  padding-right: 50px;
+}
+
+/*login form*/
+#loginPane {
+  visibility: hidden;
+  padding-right: 50px;
+}
+/*Log Out*/
+.log_out {
+  visibility: hidden;
+  font-size: 0.8em;
+  display: inline-block;
+}

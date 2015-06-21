@@ -1,0 +1,97 @@
+mv docker-machine_darwin-amd64 /usr/local/bin/docker-machine
+chmod +x /usr/local/bin/docker-machine
+/usr/local/bin/docker-machine
+cd /s/2015/docker/
+ls
+docker-machine create -d virtualbox
+docker-machine create -d virtualbox machine1
+docker-machine ls
+docker-machine ssh machine1
+docker-machine -v
+docker-machine env machine1
+eval "$(docker-machine env machine1)"
+docker info
+docker tag aaa71f07726b image1
+docker tag aaa71f07726b image1/image1
+docker tag aaa71f07726b image1:image1
+docker tag aaa71f07726b image1:latest
+docker images
+docker rmi image1:image1
+docker rmi image1/image1
+docker images
+docker run  -p 80:80
+docker run  -p 80:80 -d image1
+docker ps
+docker-machine ip
+docker-machine ip 1f4e81191044
+docker-machine ip machine1
+docker-machine ls
+docker-machine ip machine1
+docker-machine ssh machine1
+docker ps
+docker exec --help
+docker exec -i -t pensive_jang bash
+docker ps
+docker commit pensive_jang saved-image
+docker diff image1 saved-image
+docker diff pensive_jang saved-image
+docker diff help
+docker diff --help
+docker diff saved-image
+docker diff pensive_jang
+docker exec -i -t pensive_jang bash
+docker commit pensive_jang saved-image
+docker diff pensive_jang
+history
+docker ps
+docker rm -f pensive_jang
+docker images
+docker run -it -p 80:80 saved-image bash
+docker run -it -p 80:80 saved-image bash
+docker ps
+docker ps -a
+docker run -it -p 80:80 -d saved-image
+docker ps -a
+docker run --name container1 -d -p 80:80 saved-image
+docker run --name container1 -d -p 81:80 saved-image
+docker run --name container2 -d -p 81:80 saved-image
+docker ps -a
+docker save --help
+docker-machine --help
+docker-machine create
+docker-machine create --help
+docker-machine create -d digitalocean
+docker-machine create -d digitalocean --digitalocean-access-token=xxxx
+
+
+ 578  20/06/15 18:48:04 docker-machine create -d digitalocean --digitalocean-access-token=xx
+  579  20/06/15 18:48:14 docker-machine create -d digitalocean --digitalocean-access-token=xx do
+  580  20/06/15 18:54:21 history
+  581  20/06/15 18:56:05  eval "$(docker-machine env do)"
+  582  20/06/15 18:56:16 docker ps
+  583  20/06/15 18:56:22 docker ps -a
+  584  20/06/15 18:56:32 docker images
+  585  20/06/15 19:04:49 docker-machine ps
+  586  20/06/15 19:04:55 docker-machine ls
+  587  20/06/15 19:05:20 docker-machine ssh
+  588  20/06/15 19:05:23 docker-machine ssh do
+  589  20/06/15 19:07:03 docker images
+  590  20/06/15 19:09:30 docker run -it -p 80:80 saved-image
+  591  20/06/15 19:09:43 ls
+  592  20/06/15 19:09:51 docker build .
+  593  20/06/15 19:10:37 docker images
+  594  20/06/15 19:10:56 docker ls
+  595  20/06/15 19:11:11 docker run -it -p 80:80 saved-image bash
+  596  20/06/15 19:11:27 docker images
+  597  20/06/15 19:11:45 docker tag d944c02bc34c image1:image1
+  598  20/06/15 19:11:48 docker images
+  599  20/06/15 19:11:58 ducker run -d -p 80:80 image1
+  600  20/06/15 19:12:28 der run -d -p 80:80 image1
+  601  20/06/15 19:12:39 docker run -d -p 80:80 --name machine1 image1
+  602  20/06/15 19:12:45 docker run -d -p 80:80 --name machine1 image1/image1
+  603  20/06/15 19:12:51 docker run -d -p 80:80 --name machine1 image1:image1
+  604  20/06/15 19:13:00 docker ps
+  605  20/06/15 19:13:13 docker-machine ip
+  606  20/06/15 19:13:18 docker-machine ip do
+  607  20/06/15 19:15:00 history
+
